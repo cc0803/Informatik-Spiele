@@ -14,6 +14,8 @@ body {
     padding: 0;
     position: relative;
     overflow: hidden;
+    background-image: url(../Images/star-background.jpg);
+    background-size: cover;
 }
 
 .starship {
