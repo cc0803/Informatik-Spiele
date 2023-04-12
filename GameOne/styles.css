@@ -9,6 +9,20 @@
     }
 }
 
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+	}
+
+	50% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(0.95);
+	}
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -39,7 +53,6 @@ img {
 .overlay {
     background-color: rgba(255, 255, 255, 0.4);
     position: fixed;
-    pointer-events: none;
     left: 0;
     right: 0;
     top: 0;
@@ -65,7 +78,6 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    pointer-events: all;
 }
 
 form>h2 {
@@ -77,6 +89,7 @@ form>h2 {
 form>p {
     margin: 0 1vw;
     text-align: justify;
+    letter-spacing: 0.5px;
 }
 
 .select-container>div {
@@ -87,6 +100,7 @@ form>p {
 
 input {
     width: 20px;
+    cursor: pointer;
 }
 
 form>button {
@@ -95,4 +109,11 @@ form>button {
     border-radius: 10px;
     font-family: 'Geostar Fill', monospace;
     font-size: calc(10px + 0.5vw);
+    animation: pulse 0.7s infinite;
+    cursor: pointer;
+}
+
+.hidden {
+    transform: scale(0);
+    font-family: 'Geostar Fill', monospace;
 }
