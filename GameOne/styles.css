@@ -65,6 +65,7 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    pointer-events: all;
 }
 
 form>h2 {
