@@ -2,10 +2,10 @@
 
 @keyframes marquee {
     from {
-        transform: translateX(100%);
+        transform: translateX(950px);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-950px);
     }
 }
 
@@ -36,19 +36,21 @@ body {
     font-size: calc(10px + 0.5vw);
 }
 
-.starship {
+.container {
     position: absolute;
+    display: flex;
+    justify-content: center;
     left: 0;
     height: 40%;
     width: 100%;
     top: 200px;
-    animation: marquee 4s linear infinite;
-    font-size: 40px;
 }
 
 img {
+    /* Sonst ist der link "ziehbar", was bei hohen geschwindigkeiten dafür sorgt, dass er nicht funktioniert */
+    -webkit-user-drag: none;
     width: 70px;
-}
+} 
 
 .overlay {
     background-color: rgba(255, 255, 255, 0.4);
@@ -124,4 +126,15 @@ h3 {
     right: 4vw;
     color: white;
     font-size: clamp(15px, 2vw, 30px);
+}
+
+.starship {
+    display: block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    animation: marquee 4s linear infinite;
+    /* Sonst ist der link "ziehbar", was bei hohen geschwindigkeiten dafür sorgt, dass er nicht funktioniert */
+    -webkit-user-drag: none;
 }
