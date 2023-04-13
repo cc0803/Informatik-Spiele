@@ -1,5 +1,6 @@
 const startButton = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
+let fraction = "empire"
 
 startButton.addEventListener("click", () => {
     event.preventDefault();
@@ -15,8 +16,12 @@ function chooseStarfighter() {
         image.src = "../Images/Tie-Fighter.png";
         image.alt = "Bild eines TIE-Fighters";
         starfighter = document.querySelector(".starship");
+        fraction = "empire";
+        
     } else {
         image.src = "../Images/x-wing.png";
+        image.style.width = "90px";
         image.alt = "Bild eines X-Wings";
+        fraction = "rebellion";
     }
 }

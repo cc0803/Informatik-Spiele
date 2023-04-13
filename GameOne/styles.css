@@ -117,3 +117,11 @@ form>button {
     transform: scale(0);
     font-family: 'Geostar Fill', monospace;
 }
+
+h3 {
+    position: fixed;
+    top: 4vh;
+    right: 4vw;
+    color: white;
+    font-size: clamp(15px, 2vw, 30px);
+}
