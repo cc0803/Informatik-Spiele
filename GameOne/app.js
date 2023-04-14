@@ -1,11 +1,22 @@
 const startButton = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
-let fraction = "empire"
+const levelLabel = document.querySelector("h3");
+const link = document.querySelector("a");
+let fraction = "empire";
+let level = 1;
 
-startButton.addEventListener("click", () => {
+link.addEventListener("click", () => {
+    event.preventDefault();
+    level += 1;
+    levelLabel.textContent = `Level ${level}`;
+})
+
+
+startButton.addEventListener("click", function startButtonAction() {
     event.preventDefault();
     overlay.classList.add("hidden");
     chooseStarfighter();
+    this.removeEventListener("click", startButtonAction);
 });
 
 function chooseStarfighter() {
