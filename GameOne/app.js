@@ -5,12 +5,17 @@ const link = document.querySelector("a");
 let fraction = "empire";
 let level = 1;
 
+// Variabeln für Geschwindigkeit und höhe des Raumschiffes
+const container = document.querySelector(".container");
+const starship = document.querySelector(".starship")
+
+// Verändern des Levels bei click
 link.addEventListener("click", () => {
     event.preventDefault();
     level += 1;
     levelLabel.textContent = `Level ${level}`;
+    levelChange(level);
 })
-
 
 startButton.addEventListener("click", function startButtonAction() {
     event.preventDefault();
@@ -33,5 +38,24 @@ function chooseStarfighter() {
         image.style.width = "90px";
         image.alt = "Bild eines X-Wings";
         fraction = "rebellion";
+    }
+}
+
+function levelChange(level) {
+    switch (level) {
+        case 2:
+            starship.style.animation = "marqueeHorizontal 5s linear infinite";
+            break;
+        case 3:
+            container.setAttribute("style", "align-items: end;");
+            break;
+        case 4:
+            starship.style.animation = "marqueeVertical 4s linear infinite";
+            container.setAttribute("style", "justify-content: start;");
+            break;
+        case 5: 
+            document.querySelector("img").style.width = "30px";
+            starship.style.animation = "marqueeHorizontal 4s linear infinite";
+            break;
     }
 }

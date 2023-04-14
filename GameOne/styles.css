@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
 
-@keyframes marquee {
+@keyframes marqueeHorizontal {
     from {
         transform: translateX(950px);
     }
@@ -23,6 +23,15 @@
 	}
 }
 
+@keyframes marqueeVertical {
+    from {
+        transform: translateY(500px);
+    }
+    to {
+        transform: translateY(-500px);
+    }
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -30,7 +39,7 @@ body {
     padding: 0;
     position: relative;
     overflow: hidden;
-    background-image: url(../Images/star-background.jpg);
+    background-image: url("../Images/star-background.jpg");
     background-size: cover;
     font-family: 'Geostar Fill', monospace;
     font-size: calc(10px + 0.5vw);
@@ -40,10 +49,11 @@ body {
     position: absolute;
     display: flex;
     justify-content: center;
+    align-items: center;
     left: 0;
-    height: 40%;
+    height: calc(90% - 100px);
     width: 100%;
-    top: 200px;
+    top: 100px;
 }
 
 img {
@@ -134,7 +144,7 @@ h3 {
     width: 70px;
     height: 70px;
     background-size: cover;
-    animation: marquee 4s linear infinite;
+    animation: marqueeVertical 6s linear infinite;
     /* Sonst ist der link "ziehbar", was bei hohen geschwindigkeiten dafür sorgt, dass er nicht funktioniert */
     -webkit-user-drag: none;
 }
