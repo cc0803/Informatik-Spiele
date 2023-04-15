@@ -10,7 +10,9 @@ buttons.forEach(button => {
     button.addEventListener("click", () => {
         round(computersChoice(), button.value);
         updateUI(userScore, computerScore, rounds);
-        checkForWinner(userScore, computerScore);
+        if (userScore == 3 || computerScore == 3) {
+            results(checkForWinner(userScore, computerScore));
+        }
     })
 })
 
@@ -66,5 +68,15 @@ function checkForWinner(user, computer) {
         return "user";
     } else if (computer == 3) {
         return "computer";
+    } else {
+        return false;
+    }
+}
+
+function results(winner) {
+    if (winner == "user") {
+        window.location.href = "won.html";
+    } else {
+        window.location.href = "lost.html";
     }
 }
