@@ -157,3 +157,11 @@ div>span {
     display: flex;
     gap: auto;
 }
+
+.round-winner {
+    width: 40vw;
+    height: 4rem;
+    border-radius: 10px;
+    text-align: center;
+    background-color: oldlace;
+}
