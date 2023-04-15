@@ -148,3 +148,7 @@ h3 {
     /* Sonst ist der link "ziehbar", was bei hohen geschwindigkeiten dafür sorgt, dass er nicht funktioniert */
     -webkit-user-drag: none;
 }
+
+.visible {
+    visibility: hidden;
+}

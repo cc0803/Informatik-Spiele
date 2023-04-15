@@ -2,8 +2,10 @@ const startButton = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 const levelLabel = document.querySelector("h3");
 const link = document.querySelector("a.main");
+const img = document.querySelector("a>img");
 let fraction = "empire";
 let level = 1;
+let toggleVisible;
 
 // Variabeln für Geschwindigkeit und höhe des Raumschiffes
 const container = document.querySelector(".container");
@@ -40,8 +42,17 @@ function chooseStarfighter() {
     }
 }
 
-function createNewStarship() {
+function makeInterval() {
+    if (!starship.classList.contains("visible")) {
+        starship.classList.add("visible");
+    } else {
+        starship.classList.remove("visible");
+    }
+}
 
+function stopInterval() {
+    clearInterval(toggleVisible);
+    toggleVisible = null;
 }
 
 function levelChange(level) {
@@ -57,9 +68,18 @@ function levelChange(level) {
             container.setAttribute("style", "justify-content: start;");
             break;
         case 5: 
-            document.querySelector("img").style.width = "40px";
+            img.style.width = "55px";
             starship.style.animation = "marqueeHorizontal 4s linear infinite";
             container.setAttribute("style", "justify-content: center; align-items: start");
+            break;
+        case 6: 
+            container.setAttribute("style", "align-items: center;");
+            img.style.width = "70px";
+            toggleVisible = setInterval(makeInterval, 1000)
+            break;
+        case 7: 
+            img.style.width = "40px";
+            stopInterval();
             break;
     }
 }
