@@ -1,5 +1,6 @@
 const buttonNodes = document.querySelectorAll("button");
 const buttons = Array.from(buttonNodes);
+const displayRoundWinner = document.querySelector(".round-winner");
 
 let userScore = 0;
 let computerScore = 0;
@@ -29,20 +30,28 @@ function computersChoice() {
 function round(computer, user) {
     switch (true) {
         case (computer == user):
+            displayRoundWinner.textContent = "Unentschieden!";
             break;
         case (computer == "schere" && user == "stein"):
+            displayRoundWinner.textContent = "Punkt für dich!";
             userScore++;
             break;
         case (computer == "stein" && user == "papier"):
+            displayRoundWinner.textContent = "Punkt für dich!";
             userScore++;
             break;
         case (computer == "papier" && user == "schere"):
+            displayRoundWinner.textContent = "Punkt für dich!";
             userScore++;
             break;
         default:
+            displayRoundWinner.textContent = "Jabba macht einen Punkt!";
             computerScore++;
             break;
     }
+    setTimeout(() => {
+        displayRoundWinner.textContent = "";
+    }, 1500);
     rounds++;
 }
 

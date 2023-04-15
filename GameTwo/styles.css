@@ -159,6 +159,8 @@ div>span {
 }
 
 .round-winner {
+    line-height: 4rem;
+    font-size: 1.5rem;
     width: 40vw;
     height: 4rem;
     border-radius: 10px;
