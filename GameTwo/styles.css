@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&family=Monoton&family=Plaster&display=swap');
 
+* {
+    box-sizing: border-box;
+    font-family: 'Geostar Fill', monospace;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -35,12 +40,12 @@ h3 {
     margin: 0 auto;  
     text-align: center;
     font-family: 'Monoton', monospace;
-    font-size: calc(20px + 1.5vw);
+    font-size: calc(20px + 1.3vw);
 } 
 
 p {
     padding: 1rem;
-    font-size: calc(12px + 1vw);
+    font-size: calc(12px + 0.8vw);
     font-family: 'Geostar Fill', monospace;
     text-align: justify;
     margin: 1rem;
@@ -69,4 +74,86 @@ a.start-link:visited {
 
 a.start-link:hover {
     transform: scale(1.05) rotate(-1deg);
+}
+
+/* CSS For the second side */
+
+body.second-body {
+    background-image: url("../Images/Jabba.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.button-container {
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+i {
+    font-size: max(45px, 7rem);
+    padding: 1rem;
+    background-color: transparent;
+}
+
+button.option {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: oldlace;
+    padding: 0;
+}
+
+button.option:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #888;
+}
+
+button.option:active {
+    transform: scale(1);
+    background-color: #f8f8f8;
+}
+
+.scoreboard {
+    width: 40vw;
+    height: 20vh;
+    border-radius: 10px;
+    background-color: oldlace;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.scoreboard>div {
+    margin-right: 30%;
+}
+
+div>span {
+    display: inline-block;
+    margin-left: auto;
+}
+
+.spacer {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.score {
+    margin-left: 1rem; 
+    font-size: 1.5rem;
+    display: flex;
+    gap: auto;
 }
