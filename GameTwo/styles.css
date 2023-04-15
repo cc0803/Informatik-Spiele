@@ -167,3 +167,30 @@ div>span {
     text-align: center;
     background-color: oldlace;
 }
+
+/* Styles für won.html */
+
+.won {
+    background-image: url("../Images/takeoff.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.han-message {  
+    display: grid;
+    place-items: center;
+    text-align: justify;
+    width: 40vw;
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 1rem;
+}
+/* Styles für lost.html */
+
+.lost {
+    background-image: url("../Images/rancor.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
