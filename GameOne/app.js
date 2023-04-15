@@ -1,7 +1,7 @@
 const startButton = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 const levelLabel = document.querySelector("h3");
-const link = document.querySelector("a");
+const link = document.querySelector("a.main");
 let fraction = "empire";
 let level = 1;
 
@@ -34,17 +34,20 @@ function chooseStarfighter() {
         fraction = "empire";
         
     } else {
-        image.src = "../Images/x-wing.png";
-        image.style.width = "90px";
+        image.src = "../Images/x-wing.webp";
         image.alt = "Bild eines X-Wings";
         fraction = "rebellion";
     }
 }
 
+function createNewStarship() {
+
+}
+
 function levelChange(level) {
     switch (level) {
         case 2:
-            starship.style.animation = "marqueeHorizontal 5s linear infinite";
+            starship.style.animation = "marqueeVertical 5s linear infinite";
             break;
         case 3:
             container.setAttribute("style", "align-items: end;");
@@ -54,8 +57,9 @@ function levelChange(level) {
             container.setAttribute("style", "justify-content: start;");
             break;
         case 5: 
-            document.querySelector("img").style.width = "30px";
+            document.querySelector("img").style.width = "40px";
             starship.style.animation = "marqueeHorizontal 4s linear infinite";
+            container.setAttribute("style", "justify-content: center; align-items: start");
             break;
     }
 }

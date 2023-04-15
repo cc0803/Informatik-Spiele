@@ -1,48 +1,18 @@
-
-
-body {
-    background-color: rgb(20, 20, 20);
-    color: #ffc909;
-    overflow: hidden;
-    font-size: 3vw;
-    font-weight: bold;
-    line-height: 3.5vw; 
-    margin-top: 50%;
-    position: relative;
+button:first-of-type {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
 }
 
-.wrapper {
-    height: 100%;
-    width: 60%;
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    perspective: 450px;
+i {
+    font-size: 32px;
 }
 
-.scroll-text {
-    text-align: justify;
-    position: relative;
-    animation: scrolling 20s linear forwards;
+i:hover {
+    font-size: 36px;
 }
 
-h1, h3 {
-    text-align: center;
-}
-
-h3 {
-    font-size: 5vw;
-    margin-top: 0.5vw;
-    line-height: 5vw;
-}
-
-h1 {
-    font-size: 7vw;
-    line-height: 7vw;
-    margin: 0;
-}
-
-@keyframes scrolling {
-    from {top: 0; transform: rotateZ(0); transform: rotateX(10deg);}
-    to {top: -7500px; transform: rotateZ(-2000px); transform: rotateX(11deg)}
+i:active {
+    font-size: 36px;
+    color: gray;
 }

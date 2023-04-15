@@ -144,7 +144,7 @@ h3 {
     width: 70px;
     height: 70px;
     background-size: cover;
-    animation: marqueeVertical 6s linear infinite;
+    animation: marqueeHorizontal 6s linear infinite;
     /* Sonst ist der link "ziehbar", was bei hohen geschwindigkeiten dafür sorgt, dass er nicht funktioniert */
     -webkit-user-drag: none;
 }
