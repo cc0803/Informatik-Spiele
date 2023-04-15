@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&family=Monoton&family=Plaster&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.first-body {
+    background-image: url("../Images/Millennium-Falcon.webp");
+    background-size: cover;
+    background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+.text-container {
+    background-color: rgba(189, 141, 98, 0.781);
+    width: max(600px, 40vw);
+    height: max(600px, 80vh);
+    border-radius: 4vw;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    overflow: auto;
+    box-shadow: 0 0 25px rgba(189, 141, 98);
+}
+
+.text-container:hover {
+    transform: scale(1.02);
+    background-color: rgba(189, 141, 98, 0.86);
+}
+
+h3 {
+    padding: 1rem;
+    margin: 0 auto;  
+    text-align: center;
+    font-family: 'Monoton', monospace;
+    font-size: calc(20px + 1.5vw);
+} 
+
+p {
+    padding: 1rem;
+    font-size: calc(12px + 1vw);
+    font-family: 'Geostar Fill', monospace;
+    text-align: justify;
+    margin: 1rem;
+    padding: 0;
+}
+
+a.start-link {
+    margin: 0 auto;
+    height: 5rem;
+    width: 10rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    border: 5px solid #222;
+    color: #222;
+    font-family: 'Geostar Fill', monospace;
+    background-color: rgba(189, 141, 98);
+    box-shadow: 0 0 5px #222;
+}
+
+a.start-link:visited {
+    color: #222;
+}
+
+a.start-link:hover {
+    transform: scale(1.05) rotate(-1deg);
+}
