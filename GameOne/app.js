@@ -17,7 +17,11 @@ link.addEventListener("click", () => {
     event.preventDefault();
     level += 1;
     levelLabel.textContent = `Level ${level}`;
-    levelChange(level);
+    if (level != 11) {
+        levelChange(level);
+    } else {
+        window.location.href = "finish.html";
+    }
 })
 
 startButton.addEventListener("click", function startButtonAction() {
@@ -92,7 +96,7 @@ function levelChange(level) {
             break;
         case 8: 
             img.style.width = "60px";
-            img.style.animation = "rotate 1s infinite";
+            img.style.animation = "rotate 1s infinite"; 
             container.setAttribute("style", "animation: rotate 4s infinite;");
             break;
         case 9:
