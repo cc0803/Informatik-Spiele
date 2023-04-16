@@ -9,7 +9,8 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-}
+    position: absolute;
+}   
 
 .first-body {
     background-image: url("../Images/Millennium-Falcon.webp");
@@ -193,4 +194,22 @@ div>span {
     background-image: url("../Images/rancor.jpg");
     background-size: cover;
     background-attachment: fixed;
+    display: grid;
+    place-items: center;
+}
+
+h2 {
+    margin: 1rem 0;
+}
+
+/* Positioniert den Homebutton auf jeder Seite in der oberen linken Ecke*/
+
+a>.fa-house {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 2.5rem;
+    border: 3px solid white;
+    border-radius: 10px;
 }
