@@ -2,10 +2,10 @@
 
 @keyframes marqueeHorizontal {
     from {
-        transform: translateX(950px);
+        transform: translateX(52vw);
     }
     to {
-        transform: translateX(-950px);
+        transform: translateX(-52vw);
     }
 }
 
@@ -25,10 +25,37 @@
 
 @keyframes marqueeVertical {
     from {
-        transform: translateY(500px);
+        transform: translateY(52vh);
     }
     to {
-        transform: translateY(-500px);
+        transform: translateY(-52vh);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleShip {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(0.6);
+    }
+}
+
+@keyframes rotateAgainst {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
     }
 }
 
@@ -37,7 +64,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     background-image: url("../Images/star-background.jpg");
     background-size: cover;

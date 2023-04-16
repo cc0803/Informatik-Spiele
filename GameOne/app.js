@@ -3,6 +3,7 @@ const overlay = document.querySelector(".overlay");
 const levelLabel = document.querySelector("h3");
 const link = document.querySelector("a.main");
 const img = document.querySelector("a>img");
+const body = document.querySelector("body");
 let fraction = "empire";
 let level = 1;
 let toggleVisible;
@@ -61,25 +62,51 @@ function levelChange(level) {
             starship.style.animation = "marqueeVertical 5s linear infinite";
             break;
         case 3:
+            starship.style.animation = "marqueeHorizontal 3s ease-in-out infinite";
             container.setAttribute("style", "align-items: end;");
             break;
         case 4:
-            starship.style.animation = "marqueeVertical 4s linear infinite";
+            img.style.width = "55px";
+            starship.style.animation = "marqueeVertical 3s ease-in infinite";
+            img.style.animation = "rotateAgainst 1s infinite";
             container.setAttribute("style", "justify-content: start;");
             break;
         case 5: 
-            img.style.width = "55px";
+            img.style.width = "70px";
+            img.style.animation = "marqueeVertical 3s linear infinite";
             starship.style.animation = "marqueeHorizontal 4s linear infinite";
-            container.setAttribute("style", "justify-content: center; align-items: start");
+            container.setAttribute("style", "justify-content: center; align-items: center");
             break;
         case 6: 
             container.setAttribute("style", "align-items: center;");
-            img.style.width = "70px";
-            toggleVisible = setInterval(makeInterval, 1000)
+            starship.style.animation = "marqueeHorizontal 3s ease-out infinite";
+            img.style.animation = "";
+            img.style.width = "60px";
+            toggleVisible = setInterval(makeInterval, 1000);
             break;
         case 7: 
             img.style.width = "40px";
+            img.style.animation = "scaleShip 1s infinite";
+            container.setAttribute("style", "align-items: end;")
             stopInterval();
             break;
-    }
+        case 8: 
+            img.style.width = "60px";
+            img.style.animation = "rotate 1s infinite";
+            container.setAttribute("style", "animation: rotate 4s infinite;");
+            break;
+        case 9:
+            starship.style.animation = "marqueeHorizontal 3s linear infinite";
+            body.style.animation = "rotate 4s infinite";
+            img.style.animation = "scaleShip 1s ease-in infinite";
+            container.setAttribute("style", "justify-content: center; align-items: start;");
+            break;
+        case 10: 
+            body.style.animation = "";
+            img.style.animation = "marqueeVertical 4s linear infinite";
+            container.setAttribute("style", "align-items: center;");
+            container.setAttribute("style", "animation: rotateAgainst 4s infinite;");
+            toggleVisible = setInterval(makeInterval, 2000);
+            break;
+    }   
 }
