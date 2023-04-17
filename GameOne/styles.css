@@ -203,6 +203,8 @@ body.finish {
 
 .message {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     top: 50vh;
     left: 50vw;
     margin-top: -20vh;
@@ -216,14 +218,44 @@ body.finish {
 
 .message>p, 
 .message>h2 {
-    margin: 3rem;
+    margin: 1rem 3rem;
     text-align: center;
 }
 
 .message>h2 {
     font-size: 3rem;
+    margin-top: 2rem;
 }
 
 .message>p {
     font-size: 1.5rem;
+}
+
+a>.fa-solid {
+    font-size: 3rem;    
+    text-align: center;
+}
+
+a {
+    color: #222;
+    text-align: center;
+}
+
+a:visited {
+    color: #222;
+}
+
+i.box-home {
+    position: static;
+    border: 0;
+    border-radius: 10px;
+    color: #222;
+    font-size: 3rem;
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
