@@ -1,18 +1,74 @@
-button:first-of-type {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url("Images/star-background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffe81f;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+    justify-items: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Geostar Fill', monospace;
 }
 
-i {
-    font-size: 32px;
+.container {
+    width: 90vw;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 3rem;
+    align-items: stretch;
+    justify-items: stretch;
 }
 
-i:hover {
-    font-size: 36px;
+.container>* {
+    background-color: rgba(255, 255, 255, 0.306);
+    border-radius: 2rem;
+    box-shadow: 0 0 15px white;
 }
 
-i:active {
-    font-size: 36px;
-    color: gray;
+h1,
+h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+p {
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #ffe81f;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffe81f;
+}
+
+a:hover {
+    transform: scale(1.08);
+    background-color: rgba(255, 255, 255, 0.7);
 }
