@@ -109,7 +109,7 @@ function levelChange(level) {
             body.style.animation = "";
             img.style.animation = "marqueeVertical 4s linear infinite";
             container.setAttribute("style", "align-items: center;");
-            container.setAttribute("style", "animation: rotateAgainst 4s infinite;");
+            container.setAttribute("style", "animation: rotateAgainst 5s infinite;");
             toggleVisible = setInterval(makeInterval, 2000);
             break;
     }   
